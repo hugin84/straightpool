@@ -1,5 +1,6 @@
-# straightpool
-A scoreboard app for straight pool
+straightpool
+============
+# A scoreboard app for straight pool
 
 This repository uses a submodule, use the command `git clone --recurse-submodules https://github.com/hugin84/straightpool.git` to clone the submodule along with the main repository.
 
@@ -10,3 +11,9 @@ Uses flag icons from http://www.iconarchive.com/show/flags-icons-by-wikipedia.ht
 Uses https://github.com/ocornut/imgui as a submodule
 
 Uses DroidSans.ttf as provided by https://github.com/ocornut/imgui
+
+# screenshots
+![Alt text](/../screenshots/screenshots/setup.png?raw=true "Setup screen")
+![Alt text](/../screenshots/screenshots/break.png?raw=true "Break screen")
+![Alt text](/../screenshots/screenshots/play.png?raw=true "")
+![Alt text](/../screenshots/screenshots/results.png?raw=true "Results screen")
