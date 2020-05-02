@@ -377,7 +377,7 @@ void bb_run_break(bb_game_state* p_state, bb_gui_data* p_data)
 		p_state->current_player          = ((p_state->current_player + is_dry) % BB_NUM_PLAYERS);
 		p_state->game_stage              = BB_GAME_STAGE_PLAY;
 		p_player->num_consecutive_fouls  = 0u;
-		p_player->num_innings           += 1;
+		p_player->num_innings           += (int)(num_balls_pocketed == 0);
 		BB_ASSERT(p_state->inning_start_balls == 15, "Should always be 15 balls when breaking");
 	}
 	ImGui::SameLine(p_data->foul_button_x_pos);
