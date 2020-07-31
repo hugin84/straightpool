@@ -336,7 +336,9 @@ void bb_run_break(bb_game_state* p_state, bb_gui_data* p_data)
 	ImGui::SameLine();
 	ImGui::InputText("##Playername", p_player->name, sizeof(p_player->name), ImGuiInputTextFlags_ReadOnly);
 	ImGui::PushFont(p_data->p_font_20);
+	ImGui::PushFont(p_data->p_font_64);
 	ImGui::Text("Score: %3d", p_player->score);
+	ImGui::PopFont();
 	ImGui::Text("Break: %3u", p_player->num_consecutive_fouls + 1u);
 	ImGui::PopFont(); // 20
 	ImGui::EndChild();
@@ -419,7 +421,9 @@ static void loc_add_player_widgets_play(const char* labelId, bb_player* p_player
 		ImGui::RadioButton("##player_active", 0 != is_active_player);
 		ImGui::PopFont();
 		ImGui::PushFont(p_data->p_font_20);
+		ImGui::PushFont(p_data->p_font_64);
 		ImGui::Text("Score: %3d", p_player->score);
+		ImGui::PopFont();
 		ImGui::Text("Fouls: %3u", p_player->num_consecutive_fouls);
 		ImGui::PopFont();
 	}
@@ -433,7 +437,9 @@ static void loc_add_player_widgets_play(const char* labelId, bb_player* p_player
 		ImGui::SameLine();
 		ImGui::ImageButton((void*)(intptr_t)ti.texture_id, p_data->flag_size);
 		ImGui::PushFont(p_data->p_font_20);
+		ImGui::PushFont(p_data->p_font_64);
 		ImGui::Text("Score: %3d", p_player->score);
+		ImGui::PopFont();
 		ImGui::Text("Fouls: %3u", p_player->num_consecutive_fouls);
 		ImGui::PopFont();
 	}
